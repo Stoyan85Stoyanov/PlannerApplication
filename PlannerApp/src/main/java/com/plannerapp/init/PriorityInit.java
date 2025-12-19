@@ -26,7 +26,7 @@ public class PriorityInit implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
+    public void run(String... args) {
 
         long count = this.priorityRepository.count();
 
