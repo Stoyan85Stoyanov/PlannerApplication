@@ -19,9 +19,6 @@
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
             <ul class="navbar-nav row">
 
-<!--                <li class="nav-item col-md-4">-->
-<!--                    <div th:text="${@loggedUser.username}"></div>-->
-<!--                </li>-->
 
                 <li th:unless="${@loggedUser.isLogged}" class="nav-item col-md-4">
                     <a class="nav-link active h5 my-text-color" th:href="@{/login}">Login</a>
