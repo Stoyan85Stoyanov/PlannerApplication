@@ -61,7 +61,7 @@ public class TaskServiceImpl implements TaskService {
             if (username == null) {
                 task.setAssignee(null);
 
-            }else {
+            } else {
                 User user = userRepository.findByUsername(username);
                 task.setAssignee(user);
             }
@@ -78,7 +78,7 @@ public class TaskServiceImpl implements TaskService {
         List<TaskDto> assignedTasks = taskRepository.findByAssignee(user).stream()
                 .map(TaskDto::createFromTask).toList();
         List<TaskDto> availableTasks = taskRepository.getAllAvailable().stream()
-                .map(TaskDto::createFromTask).toList();;
+                .map(TaskDto::createFromTask).toList();
 
         return new TaskHomeViewModel(assignedTasks, availableTasks);
     }
