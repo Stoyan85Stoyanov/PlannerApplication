@@ -53,10 +53,9 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByUsername(username);
 
         if (user != null && passwordEncoder.matches(userLoginBindingModel.getPassword(), user.getPassword())) {
-           loggedUser.login(username);
-           return true;
+            loggedUser.login(username);
+            return true;
         }
-
         return false;
     }
 
