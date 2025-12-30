@@ -13,8 +13,6 @@
           th:object="${userLoginBindingModel}"
     >
 
-        <!--    Example: Render errors messages with fields.errors - you can make it differently. -->
-        <!--    <div th:each="error: ${#fields.errors()}" th:text="${error}" class="text-danger">Error messages</div>-->
 
         <div th:if="${hasLoginError}"
              th:text="'Incorrect username or password!'"
