@@ -49,7 +49,6 @@ public class UserServiceImpl implements UserService {
     public boolean login(UserLoginBindingModel userLoginBindingModel) {
 
         String username = userLoginBindingModel.getUsername();
-
         User user = userRepository.findByUsername(username);
 
         if (user != null && passwordEncoder.matches(userLoginBindingModel.getPassword(), user.getPassword())) {
